@@ -39,15 +39,15 @@ cd backend
 
 🔹 Crear entorno virtual
 python -m venv venv
-source env/bin/activate  # o env\Scripts\activate en Windows
+source Venv/bin/activate  # o Venv\Scripts\activate en Windows
 
 🔹 Instalar dependencias
 pip install -r requirements.txt
 
 🔹 Configurar .env
-Crear un archivo .env dentro de la carpeta config/ con este contenido:
+Crear un archivo .env dentro de la carpeta backend/ con este contenido:
 
-SECRET_KEY=tu_clave_secreta
+SECRET_KEY=django-insecure-($j3xcz7k36oy872wk6$d0y=eh0%79+-3z==cy0sa0--zyhyfd
 DB_NAME=nombre_de_tu_db
 DB_USER=usuario
 DB_PASSWORD=tu_contraseña
@@ -57,7 +57,7 @@ DB_PORT=3306
 🔹 Migraciones y seed
 python manage.py makemigrations
 python manage.py migrate
-python manage.py seed_tasks  # comando personalizado para llenar la base con tareas de prueba
+python manage.py seeder  # comando personalizado para llenar la base con tareas de prueba
 
 🔹 Ejecutar servidor
 python manage.py runserver
